@@ -1,12 +1,10 @@
 var timerEl = document.getElementById('countdown');
-var mainEl = document.getElementById('main');
-var startBtn = document.getElementById('start');
+var startButton = document.getElementById('start');
 
-var message =
-  'Congratulations! Now you are prepared to tackle the Challenge this week! Good luck!';
-var words = message.split(' ');
+startButton.addEventListener('click', startGame)
 
-// Timer that counts down from 5
+// set interval to start quiz
+
 function countdown() {
   var timeLeft = 5;
 
@@ -28,25 +26,13 @@ function countdown() {
       // use 'clearinterval()' to stop the timer
       clearInterval(timeInterval);
       // call the 'displayMessage()' function
-      displayMessage();
+      startGame();
     }
   }, 1000);
 };
 
+function startGame() {
+  // hide start btn
+  startButton.classList.add('hide');
 
-// Displays the message one word at a time
-function displayMessage() {
-  var wordCount = 0;
-
-  // Uses the `setInterval()` method to call a function to be executed every 300 milliseconds
-  var msgInterval = setInterval(function () {
-    if (words[wordCount] === undefined) {
-      clearInterval(msgInterval);
-    } else {
-      mainEl.textContent = words[wordCount];
-      wordCount++;
-    }
-  }, 300);
 }
-
-startBtn.onclick = countdown;
