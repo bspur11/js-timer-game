@@ -8,24 +8,43 @@
 .container {
 
   margin: auto;
-  width: 100%;
+  width: 80%;
   height: 100px;
   text-align: center;
   margin: 100px;
 }
 
+.score-board {
+  display: flex;
+}
+
+.timer {
+  width: 50%;
+}
+
+.score {
+  width: 50%;
+}
+
 .intro {
-  padding: 25px 245px;
+  padding: ;
+  width: 100%;
 }
 
 .welcome {
   margin-bottom: 20px;
 }
 
+#question {
+  display: flex;
+  justify-content: center;
+}
+
 #question-container {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 
@@ -37,7 +56,8 @@
   margin: 20px 400px;
 }
 
-.btn {
+.btn,
+#start {
   color: honeydew;
   background-color: blueviolet;
   border: 1px solid gray;
@@ -46,9 +66,22 @@
   outline: none;
 }
 
-.btn:hover {
+.btn-hide {
+  /* display: none; */
+}
+
+.btn:hover,
+#start:hover {
   border: 2px solid black;
   box-shadow: 0 0 10px 2px gray;
+}
+
+.btn-grid {
+  display: none;
+}
+
+.hide-question {
+  display: none;
 }
 
 #main {

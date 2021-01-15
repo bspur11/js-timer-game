@@ -11,16 +11,21 @@
 
 <body>
   <div class="container">
+    <div class="score-board">
+      <div class="score">Score</div>
+      <div class="timer">Timer</div>
+    </div>
     <h1 class="welcome">Coding Quiz Challange</h1>
     <h2 class="intro">Try to answer the following code related questions within the time limit. Keep in mind that
       incorrect answers will penalize your score/time by ten seconds!</h2>
-    <button id="start">Start</button>
+    <button id="start" class="btn-hide">Start</button>
     <h2 id="countdown"></h2>
     <p id="main"></p>
   </div>
+  <div id="question" class="hide-question">Question</div>
   <div id="question-container" class="hide">
-    <div id="question">Question</div>
-    <div id="answer-buttons" class="btn-grid">
+
+    <div id="answer-buttons" class="btn-grid hide">
       <button class="btn">Answer 1</button>
       <button class="btn">Answer 2</button>
       <button class="btn">Answer 3</button>
